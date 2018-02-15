@@ -31,11 +31,12 @@
         niceList.forEach( printMeStuff );
 
 
-        let helloThere = function( name ) {
+        let helloThere = function( name, justAlist ) {
             console.log('Somebody passed me: ', name);
+            return justAlist.join('-');
         }
 
-        helloThere('yes')
+        let kebab = helloThere('yes', niceList);
     </script>
 </body>
 </html>
