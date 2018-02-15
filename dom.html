@@ -8,22 +8,26 @@
 </head>
 <body>
     <h1 id="heading">Hello there</h1>
-    <ul class="red ui">
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-    </ul>
+    <ul class="red ui"></ul>
+    <button>Show colors</button>
 
     <script>
         document.body.style.backgroundColor = 'tomato';
 
         let colors = ['red', 'green', 'blue'];
 
-        let coolWay = document.querySelectorAll('li');
+        let listRoot = document.querySelector('ul');
+        let button = document.querySelector('button');
 
-        coolWay.forEach(function(node, i){
-            node.innerText = colors[i]
-        });
+        let displayColors = function() {
+            colors.forEach(function(color){
+                let node = document.createElement('li');
+                node.innerText = color;
+                listRoot.appendChild( node );
+            });
+        }
+
+        button.addEventListener('click', displayColors );
 
     </script>
 </body>
