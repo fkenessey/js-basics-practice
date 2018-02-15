@@ -20,11 +20,13 @@
         let button = document.querySelector('button');
 
         let displayColors = function() {
-            colors.forEach(function(color){
-                let node = document.createElement('li');
-                node.innerText = color;
-                listRoot.appendChild( node );
-            });
+            if( listRoot.children.length === 0 ) {
+                colors.forEach(function(color){
+                    let node = document.createElement('li');
+                    node.innerText = color;
+                    listRoot.appendChild( node );
+                });
+            }
         }
 
         button.addEventListener('click', displayColors );
