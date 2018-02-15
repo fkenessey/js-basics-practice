@@ -17,14 +17,13 @@
     <script>
         document.body.style.backgroundColor = 'tomato';
 
-        let h1header = document.getElementById('heading');
-        let myHeader = document.getElementsByTagName('h1');
-        let coolWay = document.querySelector('li');
+        let colors = ['red', 'green', 'blue'];
 
-        console.log(h1header)
-        coolWay.innerText = 'Hacked 2';
+        let coolWay = document.querySelectorAll('li');
 
-
+        coolWay.forEach(function(node, i){
+            node.innerText = colors[i]
+        });
 
     </script>
 </body>
