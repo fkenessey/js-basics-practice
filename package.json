@@ -1,0 +1,22 @@
+{
+  "name": "ja-basics-practice",
+  "version": "1.0.0",
+  "description": "ú",
+  "main": "ú",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greenfox-academy/ja-basics-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greenfox-academy/ja-basics-practice/issues"
+  },
+  "homepage": "https://github.com/greenfox-academy/ja-basics-practice#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
