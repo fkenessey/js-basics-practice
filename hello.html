@@ -23,16 +23,19 @@
             console.log(niceList[i]);
         }
 
+        let printMeStuff = function(el, ndx){
+            console.log('The item is', el, ndx);
+        }
+
         // this is the same
-        niceList.forEach(function(el){
-            console.log(el)
-        });
+        niceList.forEach( printMeStuff );
 
-        helloThere('yes')
 
-        function helloThere( name ) {
+        let helloThere = function( name ) {
             console.log('Somebody passed me: ', name);
         }
+
+        helloThere('yes')
     </script>
 </body>
 </html>
