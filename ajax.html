@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        let listRoot = document.querySelector('ul');
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('get','/greenfox');
+        xhr.addEventListener("load", function(){
+            try {
+                let response = JSON.parse( xhr.responseText );
+                displayColors( response );
+            } catch( error ) {
+                console.log(error);
+            }
+        });
+        xhr.send();
+
+        let displayColors = function(colors) {
+            if( listRoot.children.length === 0 ) {
+                colors.forEach(function(color){
+                    let node = document.createElement('li');
+                    node.innerText = color;
+                    listRoot.appendChild( node );
+                });
+            }
+        }
+
+    </script>
+</body>
+</html>
