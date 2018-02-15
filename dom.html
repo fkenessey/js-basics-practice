@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Hello there</h1>
+    <ul class="red ui">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+
+    <script>
+        document.body.style.backgroundColor = 'tomato';
+
+        let h1header = document.getElementById('heading');
+        let myHeader = document.getElementsByTagName('h1');
+        let coolWay = document.querySelector('li');
+
+        console.log(h1header)
+        coolWay.innerText = 'Hacked 2';
+
+
+
+    </script>
+</body>
+</html>
